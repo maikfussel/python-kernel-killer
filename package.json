@@ -1,0 +1,111 @@
+{
+  "name": "python-kernel-killer",
+  "displayName": "Python Kernel Killer",
+  "description": "Sidebar tool to list, refresh, and terminate running Python Jupyter kernels on Linux.",
+  "version": "0.0.1",
+  "publisher": "MaikPertermann",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Data Science",
+    "Notebooks",
+    "Other"
+  ],
+  "keywords": [
+    "python",
+    "jupyter",
+    "kernel",
+    "ipykernel",
+    "notebook",
+    "data science",
+    "process",
+    "kill",
+    "linux",
+    "vscode",
+    "vscodium"
+  ],
+  "icon": "resources/sidebar.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "main": "./out/extension.js",
+  "extensionKind": [
+    "workspace",
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": false
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pythonKernelKiller",
+          "title": "Python Kernels",
+          "icon": "resources/sidebar.svg"
+        }
+      ]
+    },
+    "views": {
+      "pythonKernelKiller": [
+        {
+          "icon": "resources/sidebar.svg",
+          "id": "pythonKernelKillerView",
+          "name": "Running Kernels"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "pythonKernelKiller.refresh",
+        "title": "Python Kernel Killer: Refresh Kernels",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "pythonKernelKiller.kill",
+        "title": "Python Kernel Killer: Kill Kernel",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "pythonKernelKiller.toggleAutoRefresh",
+        "title": "Python Kernel Killer: Toggle Auto-refresh",
+        "icon": "$(watch)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "pythonKernelKiller.refresh",
+          "when": "view == pythonKernelKillerView",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "pythonKernelKiller.kill",
+          "when": "view == pythonKernelKillerView && viewItem == pythonKernelProcess",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.2.0",
+    "typescript": "^5.4.0"
+  }
+}
