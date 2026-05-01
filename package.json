@@ -107,5 +107,13 @@
     "@types/vscode": "^1.90.0",
     "@vscode/vsce": "^3.2.0",
     "typescript": "^5.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maikfussel/python-kernel-killer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maikfussel/python-kernel-killer/issues"
+  },
+  "homepage": "https://github.com/maikfussel/python-kernel-killer#readme"
 }
