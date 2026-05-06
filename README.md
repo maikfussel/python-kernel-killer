@@ -7,7 +7,7 @@ It is especially useful when Jupyter kernels, multiprocessing jobs, or Python sc
 <table>
   <tr>
     <td align="center" width="48%" style="border:0;">
-      <img src="resources/Screenshot_1.png" width="50%"><br>
+      <img src="resources/Screenshot_1.png" width="51%"><br>
       Sidebar with detected processes and tooltip information
     </td>
     &nbsp;
