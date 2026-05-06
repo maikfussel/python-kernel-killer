@@ -6,13 +6,13 @@ It is especially useful when Jupyter kernels, multiprocessing jobs, or Python sc
 
 <table>
   <tr>
-    <td align="center">
-      <img src="resources/Screenshot_1.png" width="80%"><br>
+    <td align="center" width="48%" style="border:0;">
+      <img src="resources/Screenshot_1.png" width="50%"><br>
       Sidebar with detected processes and tooltip information
     </td>
     &nbsp;
-    <td align="center">
-      <img src="resources/Screenshot_2.png" width="80%"><br>
+    <td align="center" width="48%" style="border:0;">
+      <img src="resources/Screenshot_2.png" width="100%"><br>
       Kill process confirmation dialog
     </td>
   </tr>
@@ -154,9 +154,9 @@ MIT
 ## Release Notes
 
 See full changelog:
-👉 https://github.com/maikfussel/python-kernel-killer/blob/main/CHANGELOG.md
+👉 https://github.com/maikfussel/python-kernel-killer/blob/master/CHANGELOG.md
 
-### Latest version (0.1.0)
+### [0.1.0] Latest version
 
 - Process categorization (zombie, orphan, kernels, etc.)
 - CPU and memory monitoring
